@@ -12,7 +12,7 @@ pip install git+https://github.com/siddhi47/medicalimage_converter.git
 Usage:
 
 ```python
-
+import os
 from medical_image_converter.converter import multithread_converter
 
 
