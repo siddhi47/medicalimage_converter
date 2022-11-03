@@ -24,3 +24,10 @@ output_path = [os.path.join(jpg_folder_path, f.replace('.ima','.jpg')) for f in 
 multithread_converter(images_path, output_path)
 
 ```
+
+Command Line
+
+```
+python main.py -s source_directory
+
+```
