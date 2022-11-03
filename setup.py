@@ -14,7 +14,6 @@ setup(
     install_requires=[
         'opencv-python',
         'pydicom',
-        'concurrent.futures'
     ],
     python_requires='>=3.6',
 )
