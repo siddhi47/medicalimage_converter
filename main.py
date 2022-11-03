@@ -10,8 +10,22 @@ def convert_files(source_dir:str, dest_dir:str) ->None:
     dest_list = []
     for file in os.listdir(source_dir):
         if file.endswith('.ima'):
-            source_list.append(os.path.join(source_dir, file))
-            dest_list.append(os.path.join(dest_dir, file.replace('.ima', '.jpg')))
+            source_list.append(
+                    os.path.join(
+                        source_dir, 
+                        file
+                        )
+                    )
+
+            dest_list.append(
+                    os.path.join(
+                        dest_dir, 
+                        file.replace(
+                            '.ima',
+                            '.jpg'
+                            )
+                        )
+                    )
     multithread_converter(source_list, dest_list)
 
 def parse_args():
@@ -20,8 +34,19 @@ def parse_args():
     """
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('-s','--source_dir', type=str, help='Source directory')
-    parser.add_argument('-d','--dest_dir', default = 'JPG_files', type=str, help='Destination directory')
+    parser.add_argument(
+            '-s',
+            '--source_dir', 
+            type=str,
+            help='Source directory'
+            )
+    parser.add_argument(
+            '-d',
+            '--dest_dir', 
+            default = 'JPG_files', 
+            type=str, 
+            help='Destination directory'
+            )
     return parser.parse_args()
 
 def main(args):
